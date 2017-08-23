@@ -1,0 +1,153 @@
+{{>header}}
+
+
+
+
+
+
+        <div class="container">     
+            <br>
+            <br>
+
+            <div class="row">
+
+                <div class="well bs-component col-md-5  col-md-offset-3">
+
+                    <form id="pendaftaran" method="post" class="col-md-offset-3 form-horizontal" action="/admin/dashboard/update/{{data.userId}}"
+                        ng-controller='controlAdmin'>
+
+                        <fieldset>
+                            <div class="row">
+
+                                <div class="col-md-7">
+
+                                    <h1 align="center">Detail User</h1>
+
+                                    <div class="form-group is-empty">
+
+                                        <label class="control-label">Nama</label>
+
+                                        <div>
+                                            <input value="{{data.name}}" type="text" class="form-control" name="nama">
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="form-group is-empty">
+
+                                        <label class="control-label">Email</label>
+
+                                        <div>
+                                            <input value="{{data.email}}" type="email" class="form-control" name="email">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div>
+                                            <div class="checkbox">
+                                                <label>                                   
+                                                    
+                                                    {{#if data.admin}}
+
+                                        <input type="checkbox" name="admin" id="checkboxAdmin" name="check" checked >      
+
+                                         <label for="checkboxAdmin" id='isAdmin'>  Status Admin </label>
+
+                                                    {{else}}
+
+                                            <input type="checkbox" name="admin" id="checkboxAdmin" name="check"  >      
+
+                                            <label for="checkboxAdmin" id='isAdmin'> Bukan Admin  </label>
+
+
+                                                    {{/if}}
+
+                                                                                              
+                                      
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <div>
+
+
+
+                                    <a href="/admin/dashboard" id="kembali" class="btn btn-raised btn-primary"> kembali</a>
+
+
+                                    <button type="submit" class="btn btn-raised btn-primary"> Ubah Data</button>
+
+
+
+
+                                </div>
+
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </body>
+
+
+
+
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('#checkboxAdmin').click(function(){
+            if($(this).prop("checked") == true){
+                // alert("Checkbox is checked.");
+                $("#isAdmin").html("Sebagai Admin")
+            }
+            else if($(this).prop("checked") == false){
+                // alert("Checkbox is unchecked.");
+                  $("#isAdmin").html("Bukan admin")
+            }
+        });
+    });
+</script>
+
+
+
+
+{{>footer}}
+
+
+
+
+
+
+
+    <!--<script>
+
+
+  
+$('#checkboxAdmin').click(function() {
+    $("#isAdmin").toggle(this.checked);
+
+    // if (this.checked){
+
+    //     $("#isAdmin").
+
+    // }
+
+});
+
+
+</script>-->
+
+    </html>
