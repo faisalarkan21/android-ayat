@@ -13,11 +13,21 @@ public class MenuSubBab1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_sub1);
 
-        Button button= (Button) findViewById(R.id.btnSifatAllah);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button btnSifat= (Button) findViewById(R.id.btnSifatAllah);
+        btnSifat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuSubBab1.this, MenuInnerSub1.class);
+                Intent intent = new Intent(MenuSubBab1.this, MenuInnerBab1.class);
+                startActivity(intent);
+
+            }
+        });
+
+        Button btnTuhanSemesta= (Button) findViewById(R.id.btnTuhanSemesta);
+        btnTuhanSemesta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuSubBab1.this, MenuInnerBab2.class);
                 startActivity(intent);
 
             }

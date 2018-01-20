@@ -27,7 +27,7 @@ import android.widget.TextView;
 //        LayoutInflater inflater = (LayoutInflater) context
 //                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 //
-//        View rowView = inflater.inflate(R.layout.activity_menu_inner_sub1, parent, false);
+//        View rowView = inflater.inflate(R.layout.activity_menu_inner_sub, parent, false);
 //        TextView textView = (TextView) rowView.findViewById(R.id.label);
 //        textView.setText(values[position]);
 //

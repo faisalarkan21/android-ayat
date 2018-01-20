@@ -1,10 +1,13 @@
 package com.example.faisal.ayat_syafiq;
 
+import android.app.ActionBar;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +18,7 @@ public class MenuAyat extends AppCompatActivity {
     private TextView textAyat, textArti;
     int jumlahSurat ;
     static EntityQuran ayatJadi;
+    Toolbar mActionBarToolbar;
     ArrayList<String> listNamaArray,listAyatArray, listSuratArray, listKeterangan ;
 
 
@@ -23,6 +27,9 @@ public class MenuAyat extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        getSupportActionBar().setTitle(getIntent().getStringExtra("title"));
 
         EntityQuran entity = new EntityQuran();
 

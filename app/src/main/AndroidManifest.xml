@@ -19,7 +19,8 @@
 
         <activity android:name=".MenuAyat" />
         <activity android:name=".MenuSubBab1" />
-        <activity android:name=".MenuInnerSub1"></activity>
+        <activity android:name=".MenuInnerBab1"></activity>
+        <activity android:name=".MenuInnerBab2"></activity>
     </application>
 
 </manifest>

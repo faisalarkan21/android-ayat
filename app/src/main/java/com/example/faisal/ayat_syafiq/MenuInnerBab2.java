@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MenuInnerSub2 extends Activity implements BackPressedListener {
+public class MenuInnerBab2 extends Activity implements BackPressedListener {
 
     private ListView mainListView ;
     private ArrayAdapter<String> listAdapter ;
@@ -45,7 +45,7 @@ public class MenuInnerSub2 extends Activity implements BackPressedListener {
             public void onItemClick(AdapterView<?> adapter, View v, int position, long arg3)
             {
 
-                Intent intent = new Intent(MenuInnerSub2.this, MenuAyat.class);
+                Intent intent = new Intent(MenuInnerBab2.this, MenuAyat.class);
                 if (position == 0){
 
 

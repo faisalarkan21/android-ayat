@@ -13,7 +13,7 @@ import java.util.List;
 
 
 
-public class MenuInnerSub1 extends Activity implements BackPressedListener {
+public class MenuInnerBab1 extends Activity implements BackPressedListener {
 
     private ListView mainListView ;
     private ArrayAdapter<String> listAdapter ;
@@ -22,19 +22,22 @@ public class MenuInnerSub1 extends Activity implements BackPressedListener {
     List dataAyatWantedIndexSurat = new ArrayList();
     List dataAyatWantedIndexNama = new ArrayList();
     List dataAyatWantedIndexKeterangan = new ArrayList();
+    List titleSubBab = new ArrayList();
     EntityQuran entity = new EntityQuran();
 
     String[] ListSub1 = new String[] { "Allah itu Qidam",
             "Allah itu Hayyan", "Allah pemilik keagungan dan Kemulyaan",
             "Allah itu Qiamuhu Binafsihi (Beridiri Sendiri)",
-            "Allah Maha Besar dan Maha Tinggi", "Allah berbeda dengan segala sesuatu"};
+            "Allah Maha Besar dan Maha Tinggi", "Allah berbeda dengan segala sesuatu", "Allah Itu Wahdaniyat(Maha Esa)", "Tamsil Tentang Keesaan Allah"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_inner_sub);
 
-
+        titleSubBab.add("Sifat - Sifat Allah");
+        titleSubBab.add("Allah Maha Esa & Tidak Bersekutu");
 
         mainListView = (ListView) findViewById( R.id.list );
         listAdapter = new ArrayAdapter<String>(this, R.layout.list_inner_sub, ListSub1);
@@ -48,13 +51,11 @@ public class MenuInnerSub1 extends Activity implements BackPressedListener {
             public void onItemClick(AdapterView<?> adapter, View v, int position, long arg3)
             {
 
-                Intent intent = new Intent(MenuInnerSub1.this, MenuAyat.class);
+                Intent intent = new Intent(MenuInnerBab1.this, MenuAyat.class);
                 if (position == 0){
 
-
-
-                    dataAyatWantedIndexAyat.add("111");
-                    dataAyatWantedIndexSurat.add("20");
+                    dataAyatWantedIndexAyat.add(3);
+                    dataAyatWantedIndexSurat.add(57);
                     dataAyatWantedIndexNama.add("Al-Hadiid 57:3");
                     dataAyatWantedIndexKeterangan.add("Ini keterangan haddid");
 
@@ -62,14 +63,13 @@ public class MenuInnerSub1 extends Activity implements BackPressedListener {
                     intent.putStringArrayListExtra("listAyat", (ArrayList<String>) dataAyatWantedIndexAyat);
                     intent.putStringArrayListExtra("listNama", (ArrayList<String>) dataAyatWantedIndexNama);
                     intent.putStringArrayListExtra("listKetangan", (ArrayList<String>) dataAyatWantedIndexKeterangan);
+                    intent.putExtra("title",titleSubBab.get(0).toString());
 
                     startActivity(intent);
 
 
 
                 } else if (position == 1){
-
-
 
                     dataAyatWantedIndexAyat.add(111);
                     dataAyatWantedIndexSurat.add(20);
@@ -90,6 +90,7 @@ public class MenuInnerSub1 extends Activity implements BackPressedListener {
                     intent.putStringArrayListExtra("listAyat", (ArrayList<String>) dataAyatWantedIndexAyat);
                     intent.putStringArrayListExtra("listNama", (ArrayList<String>) dataAyatWantedIndexNama);
                     intent.putStringArrayListExtra("listKetangan", (ArrayList<String>) dataAyatWantedIndexKeterangan);
+                    intent.putExtra("title",titleSubBab.get(0).toString());
 
                     startActivity(intent);
 
@@ -110,6 +111,7 @@ public class MenuInnerSub1 extends Activity implements BackPressedListener {
                     intent.putStringArrayListExtra("listAyat", (ArrayList<String>) dataAyatWantedIndexAyat);
                     intent.putStringArrayListExtra("listNama", (ArrayList<String>) dataAyatWantedIndexNama);
                     intent.putStringArrayListExtra("listKetangan", (ArrayList<String>) dataAyatWantedIndexKeterangan);
+                    intent.putExtra("title",titleSubBab.get(0).toString());
 
                     startActivity(intent);
 
@@ -131,6 +133,7 @@ public class MenuInnerSub1 extends Activity implements BackPressedListener {
                     intent.putStringArrayListExtra("listAyat", (ArrayList<String>) dataAyatWantedIndexAyat);
                     intent.putStringArrayListExtra("listNama", (ArrayList<String>) dataAyatWantedIndexNama);
                     intent.putStringArrayListExtra("listKetangan", (ArrayList<String>) dataAyatWantedIndexKeterangan);
+                    intent.putExtra("title",titleSubBab.get(0).toString());
 
                     startActivity(intent);
 
@@ -172,7 +175,7 @@ public class MenuInnerSub1 extends Activity implements BackPressedListener {
                     intent.putStringArrayListExtra("listAyat", (ArrayList<String>) dataAyatWantedIndexAyat);
                     intent.putStringArrayListExtra("listNama", (ArrayList<String>) dataAyatWantedIndexNama);
                     intent.putStringArrayListExtra("listKetangan", (ArrayList<String>) dataAyatWantedIndexKeterangan);
-
+                    intent.putExtra("title",titleSubBab.get(0).toString());
                     startActivity(intent);
 
                 }else if (position == 5){
@@ -188,7 +191,23 @@ public class MenuInnerSub1 extends Activity implements BackPressedListener {
                     intent.putStringArrayListExtra("listAyat", (ArrayList<String>) dataAyatWantedIndexAyat);
                     intent.putStringArrayListExtra("listNama", (ArrayList<String>) dataAyatWantedIndexNama);
                     intent.putStringArrayListExtra("listKetangan", (ArrayList<String>) dataAyatWantedIndexKeterangan);
+                    intent.putExtra("title",titleSubBab.get(0).toString());
+                    startActivity(intent);
 
+                }else if (position == 6){
+
+                    dataAyatWantedIndexAyat.add(163);
+                    dataAyatWantedIndexSurat.add(2);
+                    dataAyatWantedIndexNama.add("Al Baqaroh 2:163");
+                    dataAyatWantedIndexKeterangan.add("Ini keterangan Hasyr");
+
+
+
+                    intent.putStringArrayListExtra("listSurat", (ArrayList<String>) dataAyatWantedIndexSurat);
+                    intent.putStringArrayListExtra("listAyat", (ArrayList<String>) dataAyatWantedIndexAyat);
+                    intent.putStringArrayListExtra("listNama", (ArrayList<String>) dataAyatWantedIndexNama);
+                    intent.putStringArrayListExtra("listKetangan", (ArrayList<String>) dataAyatWantedIndexKeterangan);
+                    intent.putExtra("title",titleSubBab.get(1).toString());
                     startActivity(intent);
 
                 }
