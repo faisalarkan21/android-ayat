@@ -28,7 +28,9 @@ public class MenuInnerBab1 extends Activity implements BackPressedListener {
     String[] ListSub1 = new String[] { "Allah itu Qidam",
             "Allah itu Hayyan", "Allah pemilik keagungan dan Kemulyaan",
             "Allah itu Qiamuhu Binafsihi (Beridiri Sendiri)",
-            "Allah Maha Besar dan Maha Tinggi", "Allah berbeda dengan segala sesuatu", "Allah Itu Wahdaniyat(Maha Esa)", "Tamsil Tentang Keesaan Allah"};
+            "Allah Maha Besar dan Maha Tinggi", "Allah berbeda dengan segala sesuatu"
+            , "Allah Itu Wahdaniyat(Maha Esa)", "Tamsil Tentang Keesaan Allah"
+    , "Test1", "Test2"};
 
 
     @Override

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/android-ayat.iml" filepath="$PROJECT_DIR$/android-ayat.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ayat_syafiq.iml" filepath="$PROJECT_DIR$/ayat_syafiq.iml" />
+      <module fileurl="file://E:\Project PI\android-ayat\app\app.iml" filepath="E:\Project PI\android-ayat\app\app.iml" />
+      <module fileurl="file://E:\Project PI\android-ayat\ayat_syafiq.iml" filepath="E:\Project PI\android-ayat\ayat_syafiq.iml" />
     </modules>
   </component>
 </project>
