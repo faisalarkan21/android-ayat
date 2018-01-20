@@ -2,6 +2,7 @@ package com.example.faisal.ayat_syafiq;
 
 import android.app.ActionBar;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -68,7 +69,9 @@ public class MenuAyat extends AppCompatActivity {
 
             TextView newAyat = new TextView(MenuAyat.this);
             newAyat.setText(ayatJadi.getListAyat().get(i).toString());
+            newAyat.setTextColor(Color.parseColor("#000000"));
             newAyat.setPadding(20,20,20,20);
+
             newAyat.setTextSize(25);
 
              /*
