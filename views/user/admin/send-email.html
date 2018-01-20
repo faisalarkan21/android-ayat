@@ -1,0 +1,296 @@
+ {{>headerAdmin}}
+
+<div class="table-users col-md-10 col-md-offset-2 container">
+    <div style="margin-top: 70px;" class="page-header text-center well col-md-12">
+        <div>
+            <div class="col-md-10 " style="margin-left: 16px;">
+                <h1 style="font-size: 30px;" class="judul"> Kirim Email Ke Peserta </h1>
+
+                <hr class="Garistema">
+
+            </div>
+        </div>
+
+
+
+
+        <div class="col-md-10" style="margin-top: -25px;">
+
+            <div class=" col-md-12  ">
+                <div id="ketikEmail" class="form-group {{error}}">
+
+                    <div class="input-group col-md-12">
+
+
+                        <label for="nama " class="control-label"> Dikirim Dari      
+                                  </label>
+                        <input class="form-control" name="nama" placeholder="Email" type="name" id="alamatkita" value="Node JS Bootcamp Team <postmaster@sandbox0e4ae9030dd64b0caaaa32721d188a83.mailgun.org>"
+                            readonly>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <div id="ketikEmail" class="form-group {{error}}">
+
+                    <div class="input-group ">
+
+
+                        <label for="nama " class="control-label"> Email Peserta      
+                                  </label>
+                        <input class="form-control " name="nama" placeholder="Email Tujuan" id="email" value="{{userValidasi.email_pembeli}}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div id="ketikEmail" class="form-group {{error}}">
+
+                    <div class="input-group ">
+
+
+                        <label for="Subject " class="control-label"> Subject      
+                                  </label>
+                        <input class="form-control " name="nama" placeholder="Subject Pesan" type="name" id="subject" value="Konfirmasi Pembayaran">
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div style="margin-left: 14px;" class="col-md-10  ">
+
+            <div id="editor-container">
+
+                <label for="editor-container " class="control-label">       
+                                  </label>
+                <hr>
+            </div>
+
+
+            <!--<textarea  name="editor" class="col-md-12" cols=""></textarea>-->
+
+
+
+        </div>
+
+
+
+
+        <div style="padding-bottom: 30px; padding-left: 20px;" class="col-md-10 col-md-offset-1">
+
+
+            <br>
+
+            <div style="padding-left:25px;" class="col-md-offset-2">
+                <a class=" btn btn-raised btn-info btn-md" href="/login"> Kembali</a>
+                <a id="clickEmail" class="btn btn-primary btn-raised">Kirim Email</a>
+
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+</div>
+
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+</div>
+</div>
+
+</body>
+
+</html>
+{{>footer}}
+
+
+<script>
+    $(document).ready(function () {
+
+        // if ($("#lunasCheck").prop("checked", true)) {
+
+        //     $("#lunasCheck").html("Lunas");
+
+        // } else if ($("#lunasCheck").prop("checked", false)) {
+
+        //     $("#lunasCheck").html("Belum Lunas");
+
+        // }
+
+
+        $("#lunasCheck").change(function () {
+            if (this.checked) {
+                console.log("Dicekliks");
+                $("#labelCheck").html("Lunas");
+                $("#uangtf").val(toRp('500000'))
+            } else {
+                console.log("Kaga diceklis");
+                $("#labelCheck").html("Belum Lunas");
+                $("#uangtf").val(toRp('0'))
+            }
+        });
+
+        // var uangtf = '{{userDetail.uang_transfer}}';
+        // // console.log(uangtf);
+        // // if (uangtf == 0) {
+
+        // //     $("#lunasCheck").prop("checked", false);
+
+
+        // // } else {
+
+        // //     $("#lunasCheck").prop("checked", true);
+
+
+        // // }
+
+        // console.log(uangtf);
+
+        // alert(toRp({{detailPembeli.harga_tiket}}));
+
+        $('#uangtf').val(toRp('{{userDetail.uang_transfer}}'));
+
+        function toRp(angka) {
+            var rev = parseInt(angka, 10).toString().split('').reverse().join('');
+            var rev2 = '';
+            for (var i = 0; i < rev.length; i++) {
+                rev2 += rev[i];
+                if ((i + 1) % 3 === 0 && i !== (rev.length - 1)) {
+                    rev2 += '.';
+                }
+            }
+            return 'Rp. ' + rev2.split('').reverse().join('') + ',00';
+        }
+
+    });
+</script>
+
+<script>
+    var quill = new Quill('#editor-container', {
+        modules: {
+            toolbar: [
+                ['bold', 'italic'],
+                ['link', 'blockquote', 'code-block', 'image'],
+                [{
+                    list: 'ordered'
+                }, {
+                    list: 'bullet'
+                }]
+            ]
+        },
+        placeholder: 'Compose an epic...',
+        theme: 'snow'
+    });
+
+    //     quill.setContents([
+    //   { insert: 'Hallo {{userValidasi.nm_pembeli}} ' ,attributes: { h1: true} },
+    //   { insert: '\n' },
+    //   { insert: 'Kami dari Tim Bootcamp Node.js'  },
+    //   { insert: '\n\n' },
+    //   { insert: 'Pembayaran Anda Telah Kami Konfirmasi', attributes: { bold: true }  },
+    // ]);
+
+    quill.clipboard.dangerouslyPasteHTML(3,
+        "<h3><b>Hallo {{userValidasi.nm_pembeli}} </b></h3></br> <p><b>Kami tim Bootcamp Node.js.</b></p> <p> Kami Ingin menyampaikan bahwa <b>pembayaran anda telah kami terima </b> dengan keterangan sebagai berikut : </p> <br/> <li> Atas Nama : <b> {{userValidasi.nm_pembeli}} </b> </li> <li> Bank Tujuan : <b> {{userValidasi.pilihan_bank}} </b> </li> <li> Nominal Uang : <b> {{uangRp}} </b></li>  <br> <p> Silahkan login pada link berikut untuk info lebih lanjut : <a href='http://127.0.0.1:3000/login'> Masuk </a>  </p>  <p> Terima kasih Telah Percaya Kepada Kami.</p></p><b>Selamat Mengikuti Jalannya Bootcamp Node.js </b> </p>"
+    );
+
+
+
+    quill.on('selection-change', function (range) {
+        console.log('selection-change', range)
+    });
+    quill.on('text-change', function (delta, source) {
+        console.log('text-change', delta, source)
+    });
+
+    $("#clickEmail").click(function () {
+
+
+
+        var isiEditor = document.querySelector(".ql-editor").innerHTML;
+        var subject = $("#subject").val();
+        var email = $("#email").val();
+        var alamatHost = $("#alamatkita").val();
+
+        // alert(subject);
+        // alert(email);
+
+        var request = $.ajax({
+            url: "http://127.0.0.1:3000/admin/dashboard/send-email/{{userValidasi.id_pembeli}}",
+            method: "POST",
+            data: {
+                contents: isiEditor,
+                subjek: subject,
+                emailTujuan: email,
+                alamatEmailHost: alamatHost
+
+            },
+            dataType: "html"
+        });
+
+        request.done(function (msg) {
+            $("#log").html(msg);
+        });
+
+        request.fail(function (jqXHR, textStatus) {
+            console.log("Request failed: " + textStatus);
+        });
+
+    })
+
+
+    // function post() {
+
+    //     console.log("Masuk!");
+    //     method = "post";
+
+    //     var form = document.createElement("form");
+    //     form.setAttribute("method", method);
+    //     form.setAttribute("action", "/admin/dashboard/send-email/{{userValidasi.id_pembeli}}");
+
+    //     var hiddenField = document.createElement("input");
+    //     hiddenField.setAttribute("type", "hidden");
+    //     hiddenField.setAttribute("name", "contents");
+    //     hiddenField.setAttribute("value", document.querySelector(".ql-editor").innerHTML);
+
+    //     form.appendChild(hiddenField);
+
+    //     document.body.appendChild(form);
+    //     form.submit();
+    // }
+</script>
