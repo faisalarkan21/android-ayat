@@ -30,7 +30,7 @@ public class MenuInnerBab1 extends Activity implements BackPressedListener {
             "Allah itu Qiamuhu Binafsihi (Beridiri Sendiri)",
             "Allah Maha Besar dan Maha Tinggi", "Allah berbeda dengan segala sesuatu"
             , "Allah Itu Wahdaniyat(Maha Esa)", "Tamsil Tentang Keesaan Allah"
-    , "Test1", "Test2"};
+    , "Test1", "Test3"};
 
 
     @Override
