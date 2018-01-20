@@ -1,20 +1,14 @@
 package com.example.faisal.ayat_syafiq;
 
-import android.animation.TimeAnimator;
 import android.app.Activity;
-import android.app.ListActivity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 
@@ -30,13 +24,15 @@ public class MenuInnerSub1 extends Activity implements BackPressedListener {
     List dataAyatWantedIndexKeterangan = new ArrayList();
     EntityQuran entity = new EntityQuran();
 
-    String[] ListSub1 = new String[] { "Allah itu Qidam", "Allah itu Hayyan", "Allah pemilik keagungan dan Kemulyaan",
-            "Allah itu Qiamuhu Binafsihi (Beridiri Sendiri)", "Allah Maha Besar dan Maha Tinggi", "Allah berbeda dengan segala sesuatu"};
+    String[] ListSub1 = new String[] { "Allah itu Qidam",
+            "Allah itu Hayyan", "Allah pemilik keagungan dan Kemulyaan",
+            "Allah itu Qiamuhu Binafsihi (Beridiri Sendiri)",
+            "Allah Maha Besar dan Maha Tinggi", "Allah berbeda dengan segala sesuatu"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_inner_sub1);
+        setContentView(R.layout.activity_menu_inner_sub);
 
 
 
@@ -109,6 +105,84 @@ public class MenuInnerSub1 extends Activity implements BackPressedListener {
                     dataAyatWantedIndexSurat.add(55);
                     dataAyatWantedIndexNama.add("Ar-Rochmaan 58:25");
                     dataAyatWantedIndexKeterangan.add("Ini keterangan Hasyr");
+
+                    intent.putStringArrayListExtra("listSurat", (ArrayList<String>) dataAyatWantedIndexSurat);
+                    intent.putStringArrayListExtra("listAyat", (ArrayList<String>) dataAyatWantedIndexAyat);
+                    intent.putStringArrayListExtra("listNama", (ArrayList<String>) dataAyatWantedIndexNama);
+                    intent.putStringArrayListExtra("listKetangan", (ArrayList<String>) dataAyatWantedIndexKeterangan);
+
+                    startActivity(intent);
+
+                }else if (position == 3){
+
+                    dataAyatWantedIndexAyat.add(255);
+                    dataAyatWantedIndexSurat.add(2);
+                    dataAyatWantedIndexNama.add("Al-Baqaroh 2:255");
+                    dataAyatWantedIndexKeterangan.add("Yang dimaksudkan senantiasa berdiri adalah tidak memerlukan yang lain, tetapi di butuhkan selain-Nya");
+
+                    dataAyatWantedIndexAyat.add(2);
+                    dataAyatWantedIndexSurat.add(3);
+                    dataAyatWantedIndexNama.add("Ali Imron 3:2");
+                    dataAyatWantedIndexKeterangan.add("Ini keterangan Hasyr");
+
+
+
+                    intent.putStringArrayListExtra("listSurat", (ArrayList<String>) dataAyatWantedIndexSurat);
+                    intent.putStringArrayListExtra("listAyat", (ArrayList<String>) dataAyatWantedIndexAyat);
+                    intent.putStringArrayListExtra("listNama", (ArrayList<String>) dataAyatWantedIndexNama);
+                    intent.putStringArrayListExtra("listKetangan", (ArrayList<String>) dataAyatWantedIndexKeterangan);
+
+                    startActivity(intent);
+
+                }else if (position == 4){
+
+                    dataAyatWantedIndexAyat.add(9);
+                    dataAyatWantedIndexSurat.add(13);
+                    dataAyatWantedIndexNama.add("Ar Ro'd 13:9");
+                    dataAyatWantedIndexKeterangan.add("Ini keterangan Hasyr");
+
+
+                    dataAyatWantedIndexAyat.add(62);
+                    dataAyatWantedIndexSurat.add(22);
+                    dataAyatWantedIndexNama.add("Al-Hajj 22:62");
+                    dataAyatWantedIndexKeterangan.add("Ini keterangan Hasyr");
+
+                    dataAyatWantedIndexAyat.add(30);
+                    dataAyatWantedIndexSurat.add(31);
+                    dataAyatWantedIndexNama.add("Al-Luqman 31:30");
+                    dataAyatWantedIndexKeterangan.add("Ini keterangan Hasyr");
+
+
+                    dataAyatWantedIndexAyat.add(23);
+                    dataAyatWantedIndexSurat.add(34);
+                    dataAyatWantedIndexNama.add("Saba 34:23");
+                    dataAyatWantedIndexKeterangan.add("Ini keterangan Al-Hajj");
+
+                    dataAyatWantedIndexAyat.add(74);
+                    dataAyatWantedIndexSurat.add(56);
+                    dataAyatWantedIndexNama.add("Luqman 56:74");
+                    dataAyatWantedIndexKeterangan.add("Ini keterangan Al-Hajj");
+
+
+
+
+
+
+                    intent.putStringArrayListExtra("listSurat", (ArrayList<String>) dataAyatWantedIndexSurat);
+                    intent.putStringArrayListExtra("listAyat", (ArrayList<String>) dataAyatWantedIndexAyat);
+                    intent.putStringArrayListExtra("listNama", (ArrayList<String>) dataAyatWantedIndexNama);
+                    intent.putStringArrayListExtra("listKetangan", (ArrayList<String>) dataAyatWantedIndexKeterangan);
+
+                    startActivity(intent);
+
+                }else if (position == 5){
+
+                    dataAyatWantedIndexAyat.add(11);
+                    dataAyatWantedIndexSurat.add(42);
+                    dataAyatWantedIndexNama.add("Asy Syuroo 42:11");
+                    dataAyatWantedIndexKeterangan.add("Ini keterangan Hasyr");
+
+
 
                     intent.putStringArrayListExtra("listSurat", (ArrayList<String>) dataAyatWantedIndexSurat);
                     intent.putStringArrayListExtra("listAyat", (ArrayList<String>) dataAyatWantedIndexAyat);
