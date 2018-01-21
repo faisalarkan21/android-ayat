@@ -7,6 +7,7 @@
         android:layout_height="match_parent"
         android:id="@+id/layoutAyat"
         android:orientation="vertical"
+
         tools:context="com.example.faisal.ayat_syafiq.MenuAyat">
 
 
