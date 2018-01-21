@@ -36,7 +36,7 @@ public class MenuInnerBab1 extends Activity implements BackPressedListener {
             ,"Allah SWT Maha Pencipta dan Pembentuk", "Cara Allah SWT Menciptkan Segala Urusan", "Semua Ciptaan-Nya Seimbang", "Ciptaan Allah SWT Sempurna dan Diberi Petunjuk",
             "Allah Yang Menghidupkan dan Yang Mematikan", "Allah SWT Menghidupkan Yang Mati", "Allah SWT Maha Kaya", "Allah Maha Kaya lagi Maha Terpuji",
             "Allah SWT Maha Pengasih dan Maha Penyayang", "Allah SWWT Utamakan Kasih Sayang", "Allah SWT Maha Baik dan Penyayang", "Allah SWT Memiliki Karunia Yang Besar"
-            ,"Allah SWT Pemberi Rejki", "Allah SWT Pemberi Kekayaan dan Kecukupan", "Pemberian Allah Amat Luas", "Allah SWT Pemberi Petunjuk", "Allah Pemberi Cahaya". "Allah SWT Meninggikan Derajat Hambanya", "Allah SWT Sebaik-baik Penjaga", "Allah SWT Maha Pemelihara", "Cukuplah Allah SWT sebagai Pemelihara"};
+            ,"Allah SWT Pemberi Rejki", "Allah SWT Pemberi Kekayaan dan Kecukupan", "Pemberian Allah Amat Luas", "Allah SWT Pemberi Petunjuk", "Allah Pemberi Cahaya","Allah SWT Meninggikan Derajat Hambanya", "Allah SWT Sebaik-baik Penjaga", "Allah SWT Maha Pemelihara", "Cukuplah Allah SWT sebagai Pemelihara"};
 
 
     @Override
@@ -696,10 +696,29 @@ public class MenuInnerBab1 extends Activity implements BackPressedListener {
                     dataAyatWantedIndexNama.add("Q.S Al Faatihah 1:1");
                     dataAyatWantedIndexKeterangan.add("Berarti kita memulai membaca surat Al Faatihah ini dengan menyebut nama Allah setiap pekerjaan yang baik hendaklah dimulai dengan menyebut asma Allah, Misalnya ketika mulai makan, munum dan lain sebagainya");
 
-                    dataAyatWantedIndexAyat.add(1);
-                    dataAyatWantedIndexSurat.add(1);
-                    dataAyatWantedIndexNama.add("Q.S Al Faatihah 1:1");
+                    dataAyatWantedIndexAyat.add(163);
+                    dataAyatWantedIndexSurat.add(2);
+                    dataAyatWantedIndexNama.add("Q.S Al Baqoroh 2:163");
                     dataAyatWantedIndexKeterangan.add("");
+
+                    intent.putStringArrayListExtra("listSurat", (ArrayList<String>) dataAyatWantedIndexSurat);
+                    intent.putStringArrayListExtra("listAyat", (ArrayList<String>) dataAyatWantedIndexAyat);
+                    intent.putStringArrayListExtra("listNama", (ArrayList<String>) dataAyatWantedIndexNama);
+                    intent.putStringArrayListExtra("listKetangan", (ArrayList<String>) dataAyatWantedIndexKeterangan);
+                    intent.putExtra("title",titleSubBab.get(3).toString());
+                    startActivity(intent);
+
+                }else if (position == 29){
+
+                    dataAyatWantedIndexAyat.add(12);
+                    dataAyatWantedIndexSurat.add(6);
+                    dataAyatWantedIndexNama.add("Q.S Al An'aam 6:12");
+                    dataAyatWantedIndexKeterangan.add("Kasis Sayang Allah mendahului murka-Nya.Maksudnya adalah Allah memberikan kesempatan kepada hamba-hamba-Nya yang berbuat dosa untuk segera bertaubat dan tidak segera mengabzabnya.");
+
+                    dataAyatWantedIndexAyat.add(54);
+                    dataAyatWantedIndexSurat.add(6);
+                    dataAyatWantedIndexNama.add("Q.S Al An'aam 6:54");
+                    dataAyatWantedIndexKeterangan.add("Yang dimaksud rahmat Allah disini adalah kasih sayang Allah kepada makhluk-Nya. Allah mendahulukan kasih sayang-Nya dari Murka-Nya");
 
                     intent.putStringArrayListExtra("listSurat", (ArrayList<String>) dataAyatWantedIndexSurat);
                     intent.putStringArrayListExtra("listAyat", (ArrayList<String>) dataAyatWantedIndexAyat);
