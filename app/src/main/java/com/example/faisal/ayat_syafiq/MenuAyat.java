@@ -85,7 +85,7 @@ public class MenuAyat extends AppCompatActivity {
             newAyat.setTextColor(Color.parseColor("#000000"));
             newAyat.setPadding(20,40,50,20);
             newAyat.setLineSpacing(0,1.6f);
-            newAyat.setTextSize(25);
+            newAyat.setTextSize(20);
 
              /*
                 Text Ayat Arti
