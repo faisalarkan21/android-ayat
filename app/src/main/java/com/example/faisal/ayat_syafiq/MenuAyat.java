@@ -1,12 +1,21 @@
 package com.example.faisal.ayat_syafiq;
 
 import android.app.ActionBar;
+import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
+import android.graphics.DashPathEffect;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
@@ -36,6 +45,9 @@ public class MenuAyat extends AppCompatActivity {
 
         LinearLayout layout = (LinearLayout)findViewById(R.id.layoutAyat);
 
+
+
+
         DAOQuran databaseAccess = DAOQuran.getInstance(this);
         databaseAccess.open();
 
@@ -55,17 +67,14 @@ public class MenuAyat extends AppCompatActivity {
         List<TextView> textListLabelArti = new ArrayList<TextView>( listSuratArray.size());
         List<TextView> textListLabelKeterangan = new ArrayList<TextView>( listSuratArray.size());
 
+        List<TextView> textListLines = new ArrayList<TextView>( listSuratArray.size());
+        List<ImageView> imgList = new ArrayList<ImageView>(listSuratArray.size());
+
         for(int i = 0; i < ayatJadi.getListAyat().size(); i++)
         {
-            /*
-                Nama Surat
-             */
 
-            TextView newNama = new TextView(MenuAyat.this);
-            newNama.setText(listNamaArray.get(i).toString());
-            newNama.setPadding(50,50,20,20);
-            newNama.setTextColor(Color.parseColor("#000000"));
-            newNama.setTextSize(20);
+
+
 
             /*
                 Text Ayat Arab
@@ -114,9 +123,44 @@ public class MenuAyat extends AppCompatActivity {
             newKeterangan.setTextColor(Color.parseColor("#000000"));
             newKeterangan.setTextSize(14);
 
+
+                  /*
+                Text Ayat Keterangan
+             */
+
+            ImageView imageView = new ImageView(this);
+            imageView.setBackgroundResource(R.drawable.ic_launcher_background);
+            imageView.setPadding(50,40,20,0);
+
+
+            int getHeightLyout = layout.getHeight();
+            /*
+                Nama Surat
+             */
+
+            TextView newNama = new TextView(MenuAyat.this);
+            newNama.setText(listNamaArray.get(i).toString());
+            newNama.setPadding(50,50,20,20);
+            newNama.setTextColor(Color.parseColor("#000000"));
+            newNama.setTextSize(17);
+
+//
+//            imgList.add(imageView);
+//            layoutFrame.addView(imageView);
+//
+//            textListNama.add(newNama);
+//            layoutFrame.addView(newNama);
+
+
+//            // Tambah Lines
+//            layout.addView(imageView);
+//            imgList.add(imageView);
+
             // Tambah nama
             textListNama.add(newNama);
             layout.addView(newNama);
+
+
 
             // Tambah Ayat
             layout.addView(newAyat);
