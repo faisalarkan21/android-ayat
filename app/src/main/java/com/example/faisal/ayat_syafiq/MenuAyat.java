@@ -28,6 +28,7 @@ public class MenuAyat extends AppCompatActivity {
 
     private SQLiteDatabase db;
     private TextView textAyat, textArti;
+    private String keteranganCheck;
     int jumlahSurat ;
     static EntityQuran ayatJadi;
     Toolbar mActionBarToolbar;
@@ -110,6 +111,7 @@ public class MenuAyat extends AppCompatActivity {
                 Text Ayat Arti
              */
 
+            // untuk label Ayat Arti
             TextView newArtiLabel = new TextView(MenuAyat.this);
             newArtiLabel.setText("Artinya : ");
             newArtiLabel.setPadding(50,60,20,0);
@@ -117,7 +119,7 @@ public class MenuAyat extends AppCompatActivity {
             newArtiLabel.setLineSpacing(0,1.5f);
             newArtiLabel.setTextSize(13);
 
-
+            // untuk isi ayat arti
             TextView newArti = new TextView(MenuAyat.this);
             newArti.setText(ayatJadi.getListArti().get(i).toString().replace("&quot;", ""));
             newArti.setPadding(50,20,20,20);
@@ -125,17 +127,27 @@ public class MenuAyat extends AppCompatActivity {
             newArti.setLineSpacing(0,1.5f);
             newArti.setTextSize(15);
 
+            /*
+                Text Ayat Keterangan
+             */
+
+
+            // untuk label keterangan
             TextView newKeteranganLabel = new TextView(MenuAyat.this);
-            newKeteranganLabel.setText("Keterangan : ");
+
+            // test jika keterangan berisi null with .isEmpty()
+
+            if (listKeterangan.get(i).toString().isEmpty()){
+                newKeteranganLabel.setText("");
+            }else {
+                newKeteranganLabel.setText("Keterangan : ");
+            }
             newKeteranganLabel.setPadding(50,30,20,0);
             newKeteranganLabel.setTextColor(Color.parseColor("#000000"));
             newKeteranganLabel.setLineSpacing(0,1.5f);
             newKeteranganLabel.setTextSize(13);
 
-             /*
-                Text Ayat Keterangan
-             */
-
+            // untuk isi keterangan
             TextView newKeterangan = new TextView(MenuAyat.this);
             newKeterangan.setText(listKeterangan.get(i).toString().replace("&quot;", ""));
             newKeterangan.setPadding(50,20,20,80);
@@ -143,16 +155,9 @@ public class MenuAyat extends AppCompatActivity {
             newKeteranganLabel.setLineSpacing(0,1.7f);
             newKeterangan.setTextSize(14);
 
-
-
-
-
-
-
             // Tambah nama
             textListNama.add(newNama);
             layout.addView(newNama);
-
 
 
             // Tambah Ayat
