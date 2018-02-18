@@ -89,6 +89,7 @@ public class MenuInnerBab1 extends Activity implements BackPressedListener {
 
                     dataAyatWantedIndexAyat.add(111);
                     dataAyatWantedIndexSurat.add(20);
+
                     dataAyatWantedIndexNama.add("Q.S Thoohaa 20:111");
                     dataAyatWantedIndexKeterangan.add("Ini keterangan Thoohaa");
 
@@ -101,6 +102,7 @@ public class MenuInnerBab1 extends Activity implements BackPressedListener {
                     dataAyatWantedIndexSurat.add(40);
                     dataAyatWantedIndexNama.add("Q.S Al-Mu'min 40:65");
                     dataAyatWantedIndexKeterangan.add("Ini keterangan Mu'min");
+
 
                     intent.putStringArrayListExtra("listSurat", (ArrayList<String>) dataAyatWantedIndexSurat);
                     intent.putStringArrayListExtra("listAyat", (ArrayList<String>) dataAyatWantedIndexAyat);
