@@ -19,8 +19,34 @@
 
         <activity android:name=".MenuAyat" />
         <activity android:name=".MenuSubBab1" />
+        <activity android:name=".MenuSubBab2" />
+        <activity android:name=".MenuSubBab3" />
+        <activity android:name=".MenuSubBab4" />
+        <activity android:name=".MenuSubBab5" />
+        <activity android:name=".MenuSubBab6" />
+        <activity android:name=".MenuInnerBabAlQuran1"></activity>
+        <activity android:name=".MenuInnerBabAlQuran2"></activity>
+        <activity android:name=".MenuInnerBabMdP1"></activity>
+        <activity android:name=".MenuInnerBabMdP2"></activity>
+        <activity android:name=".MenuInnerBabMdP3"></activity>
+        <activity android:name=".MenuInnerBabAS1"></activity>
+        <activity android:name=".MenuInnerBabAS2"></activity>
+        <activity android:name=".MenuInnerBabAS3"></activity>
+        <activity android:name=".MenuInnerBabYPTDYPL1"></activity>
+        <activity android:name=".MenuInnerBabYPTDYPL2"></activity>
+        <activity android:name=".MenuInnerBabYPTDYPL3"></activity>
+        <activity android:name=".MenuInnerBabRMMK1"></activity>
+        <activity android:name=".MenuInnerBabRMMK2"></activity>
+        <activity android:name=".MenuInnerBabRMMK3"></activity>
+        <activity android:name=".MenuInnerBabRMMK4"></activity>
+        <activity android:name=".MenuInnerBabRMMK5"></activity>
+        <activity android:name=".MenuInnerBabRMMK6"></activity>
+        <activity android:name=".MenuInnerBabRMMK7"></activity>
         <activity android:name=".MenuInnerBab1"></activity>
         <activity android:name=".MenuInnerBab2"></activity>
+        <activity android:name=".MenuInnerBab3"></activity>
+        <activity android:name=".MenuInnerBab4"></activity>
     </application>
+
 
 </manifest>

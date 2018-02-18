@@ -13,8 +13,8 @@ public class MenuSubBab1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_sub1);
 
-        Button btnSifat= (Button) findViewById(R.id.btnSifatAllah);
-        btnSifat.setOnClickListener(new View.OnClickListener() {
+        Button btnSifatAllah= (Button) findViewById(R.id.btnSifatAllah);
+        btnSifatAllah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuSubBab1.this, MenuInnerBab1.class);
@@ -32,6 +32,29 @@ public class MenuSubBab1 extends AppCompatActivity {
 
             }
         });
+
+        Button btnHidayahdanRahmat= (Button) findViewById(R.id.btnHidayahdanRahmat);
+        btnHidayahdanRahmat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuSubBab1.this, MenuInnerBab3.class);
+                startActivity(intent);
+
+            }
+        });
+
+        Button btnNikmatLaknatdanAzabAllah= (Button) findViewById(R.id.btnNikmatLaknatdanAzabAllah);
+        btnNikmatLaknatdanAzabAllah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuSubBab1.this, MenuInnerBab4.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+
 
 
     }

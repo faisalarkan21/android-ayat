@@ -40,7 +40,7 @@ public class MenuAyat extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        // actionbar
         getSupportActionBar().setTitle(getIntent().getStringExtra("title"));
         Drawable d =getResources().getDrawable(R.drawable.bgheader);
 //        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#1B5E20")));
@@ -86,8 +86,8 @@ public class MenuAyat extends AppCompatActivity {
              */
 
             TextView newNama = new TextView(MenuAyat.this);
-            newNama.setBackgroundResource(R.drawable.bgheader);
-//            newNama.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#01261f")));
+//            newNama.setBackgroundResource(R.drawable.bgheader);
+            newNama.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#01261f")));
             newNama.setText(listNamaArray.get(i).toString());
             newNama.setPadding(50,50,20,20);
             newNama.setTextColor(Color.parseColor("#FFFFFF"));
