@@ -1,143 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.faisal.ayat_syafiq.MenuUtama"
-   >
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ff00ccff"></ScrollView>
-    <Button
-        android:id="@+id/btnPertama"
-        android:layout_width="wrap_content"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Allah SWT Penguasa Alam Semesta"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.028" />
-
-    <Button
-        android:id="@+id/btnKedua"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kitab Suci Al Qur'an"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.437"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.127" />
-
-    <Button
-        android:id="@+id/btnKetiga"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Manusia Dan Problematikanya"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.227" />
-
-    <Button
-        android:id="@+id/btnKeempat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Alam Semesta"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.43"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.313" />
-
-    <Button
-        android:id="@+id/btnKelima"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Yang Paling Taat dan Yang Paling Laknat"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.412" />
-
-    <Button
-        android:id="@+id/btnKeenam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ragam Manusia Menurut Keyakinannya"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.517" />
-
-    <Button
-        android:id="@+id/btnKetujuh"
-        android:layout_width="wrap_content"
-        android:layout_height="46dp"
-        android:text="Amal Perbuatan Manusia"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.624" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="30dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="30dp"
+        android:textAlignment="inherit"
+        android:weightSum="1">
 
 
-    <Button
-        android:id="@+id/btnKedelapan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Aneka Macam Ibadah"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.708" />
+        <Button
+            android:id="@+id/btnPertama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Allah SWT Penguasa Alam Semesta"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.142" />
 
-    <Button
-        android:id="@+id/btnKesembilan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ibadah-Ibadah Lainnya"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.807" />
+        <Button
+            android:id="@+id/btnKedua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kitab Suci Al Qur'an"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.284" />
+
+        <Button
+            android:id="@+id/btnKetiga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manusia Dan Problematikanya"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.426" />
+
+        <Button
+            android:id="@+id/btnKeempat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alam Semesta"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.568" />
+
+        <Button
+            android:id="@+id/btnKelima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yang Paling Taat dan Yang Paling Laknat"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.710" />
+
+        <Button
+            android:id="@+id/btnKeenam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ragam Manusia Menurut Keyakinannya"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.852" />
+
+        <Button
+            android:id="@+id/btnKetujuh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amal Perbuatan Manusia"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.994" />
+
+        <Button
+            android:id="@+id/btnKedelapan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aneka Macam Ibadah"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1136" />
 
 
-    <Button
-        android:id="@+id/btnKesepuluh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dua Alam Kehidupan"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.911" />
+        <Button
+            android:id="@+id/btnKesembilan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ibadah-Ibadah Lainnya"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1278" />
 
-    <Button
-        android:id="@+id/btnKesebelas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Persinggahan Terakhir"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.996" />
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/btnKesepuluh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dua Alam Kehidupan"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1420" />
+
+
+        <Button
+            android:id="@+id/btnKesebelas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Persinggahan Terakhir"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.1562"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1278" />
+    </LinearLayout>
+
+</ScrollView>
