@@ -1,8 +1,6 @@
 package com.example.faisal.ayat_syafiq;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,50 +10,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import android.widget.TextView;
 
-public class MenuSubBab3 extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener {
+public class AboutActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener  {
+
+    TextView textAbout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_sub3);
+        setContentView(R.layout.activity_about);
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button btnAsalUsulManusia= (Button) findViewById(R.id.btnAsalUsulManusia);
-        btnAsalUsulManusia.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MenuSubBab3.this, MenuInnerBabMdP1.class);
-                startActivity(intent);
-
-            }
-        });
-
-        Button btnDinamikaKehidupan= (Button) findViewById(R.id.btnDinamikaKehidupan);
-        btnDinamikaKehidupan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MenuSubBab3.this, MenuInnerBabMdP2.class);
-                startActivity(intent);
-
-            }
-        });
-
-        Button btnJiwaAkalNafsu= (Button) findViewById(R.id.btnJiwaAkalNafsu);
-        btnJiwaAkalNafsu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MenuSubBab3.this, MenuInnerBabMdP3.class);
-                startActivity(intent);
-
-            }
-        });
-
+        textAbout = (TextView) findViewById(R.id.textAbout);
+        textAbout.setText("Aplikasi Al-Qur'an Solution adalah aplikasi yang menyediakan informasi mengenai solusi ayat ayat Al Qur'an yang berhubungan dengan masalah banyaknya problematika manusia. \n\nPenulis :\nSyafiq Fadhilah ");
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -65,8 +36,6 @@ public class MenuSubBab3 extends AppCompatActivity  implements NavigationView.On
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-
 
     }
 
@@ -86,11 +55,11 @@ public class MenuSubBab3 extends AppCompatActivity  implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-
+            startActivity(new Intent(AboutActivity.this,  MenuSubBab3.class));
             // Handle the camera action
         } else if (id == R.id.nav_info) {
 
-            startActivity(new Intent(MenuSubBab3.this,  AboutActivity.class));
+
 
         }else if (id == R.id.nav_exit){
 
@@ -103,5 +72,4 @@ public class MenuSubBab3 extends AppCompatActivity  implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
 }

@@ -9,14 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:theme="@style/AppTheme.NoActionBar" android:name=".MenuSubBab3" android:label="Al-Quran Solution">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MenuAyat" />
+        <activity
+            android:name=".MenuSubBab3"
+            android:label="Manusia dan Problematika"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuAyat"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MenuSubBab1" />
         <activity android:name=".MenuSubBab2" />
         <activity android:name=".MenuSubBab4" />
@@ -24,9 +30,15 @@
         <activity android:name=".MenuSubBab6" />
         <activity android:name=".MenuInnerBabAlQuran1" />
         <activity android:name=".MenuInnerBabAlQuran2" />
-        <activity android:name=".MenuInnerBabMdP1" />
-        <activity android:name=".MenuInnerBabMdP2" />
-        <activity android:name=".MenuInnerBabMdP3" />
+        <activity
+            android:name=".MenuInnerBabMdP1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuInnerBabMdP2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MenuInnerBabMdP3"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MenuInnerBabAS1" />
         <activity android:name=".MenuInnerBabAS2" />
         <activity android:name=".MenuInnerBabAS3" />
@@ -44,7 +56,12 @@
         <activity android:name=".MenuInnerBab2" />
         <activity android:name=".MenuInnerBab3" />
         <activity android:name=".MenuInnerBab4" />
-        <activity android:name=".SplashScreen"></activity>
+        <activity
+            android:name=".App"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AboutActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
