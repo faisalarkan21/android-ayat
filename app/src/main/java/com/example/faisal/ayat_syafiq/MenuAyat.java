@@ -2,6 +2,7 @@ package com.example.faisal.ayat_syafiq;
 
 import android.app.ActionBar;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
@@ -14,6 +15,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -220,9 +222,26 @@ public class MenuAyat extends AppCompatActivity implements NavigationView.OnNavi
 
         } else if (id == R.id.nav_exit) {
 
+            DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    switch (which) {
+                        case DialogInterface.BUTTON_POSITIVE:
+                            finishAffinity();
+                            System.exit(0);
+                            break;
 
-            finishAffinity();
-            System.exit(0);
+                        case DialogInterface.BUTTON_NEGATIVE:
+                            //No button clicked
+                            break;
+                    }
+                }
+            };
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(MenuAyat.this);
+            builder.setMessage("Apakah yakin inigin keluar ?").setPositiveButton("Ya", dialogClickListener)
+                    .setNegativeButton("Tidak", dialogClickListener).show();
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

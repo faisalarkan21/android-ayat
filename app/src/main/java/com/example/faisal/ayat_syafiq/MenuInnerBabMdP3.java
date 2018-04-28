@@ -1,6 +1,7 @@
 package com.example.faisal.ayat_syafiq;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,6 +9,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -606,8 +608,25 @@ public class MenuInnerBabMdP3 extends AppCompatActivity implements BackPressedLi
         }else if (id == R.id.nav_exit){
 
 
-            finishAffinity();
-            System.exit(0);
+            DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    switch (which) {
+                        case DialogInterface.BUTTON_POSITIVE:
+                            finishAffinity();
+                            System.exit(0);
+                            break;
+
+                        case DialogInterface.BUTTON_NEGATIVE:
+                            //No button clicked
+                            break;
+                    }
+                }
+            };
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(MenuInnerBabMdP3.this);
+            builder.setMessage("Apakah yakin inigin keluar ?").setPositiveButton("Ya", dialogClickListener)
+                    .setNegativeButton("Tidak", dialogClickListener).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
