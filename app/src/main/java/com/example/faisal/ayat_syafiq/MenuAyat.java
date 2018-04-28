@@ -42,12 +42,10 @@ public class MenuAyat extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // actionbar
-        getSupportActionBar().setTitle(getIntent().getStringExtra("title"));
-        Drawable d =getResources().getDrawable(R.drawable.bgheader);
-//        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#1B5E20")));
-        getSupportActionBar().setBackgroundDrawable(d);
-
-
+//        getSupportActionBar().setTitle(getIntent().getStringExtra("title"));
+//        Drawable d =getResources().getDrawable(R.drawable.bgheader);
+//
+//        getSupportActionBar().setBackgroundDrawable(d);
 
         EntityQuran entity = new EntityQuran();
         LinearLayout layout = (LinearLayout)findViewById(R.id.layoutAyat);
@@ -88,7 +86,7 @@ public class MenuAyat extends AppCompatActivity {
 
             TextView newNama = new TextView(MenuAyat.this);
 //            newNama.setBackgroundResource(R.drawable.bgheader);
-            newNama.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#01261f")));
+            newNama.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#b50909")));
             newNama.setText(listNamaArray.get(i).toString());
             newNama.setPadding(50,50,20,20);
             newNama.setTextColor(Color.parseColor("#FFFFFF"));

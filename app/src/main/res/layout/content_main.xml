@@ -4,40 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgutama"
+    android:background="@drawable/bg"
     tools:context="com.example.faisal.ayat_syafiq.MenuSubBab3">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="200dp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:text="Indeks Tematik"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.183" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="200dp"
+        android:gravity="center"
+        android:text="Connect your problem with ayat"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.317" />
 
     <Button
         android:id="@+id/btnAsalUsulManusia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Asal-Usul Manusia dan Sifat-Sifatnya"
+        android:width="280dp"
+        android:text="Asal Mula Manusia dan Sifatnya"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.149" />
+        app:layout_constraintVertical_bias="0.418" />
 
     <Button
         android:id="@+id/btnDinamikaKehidupan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:width="280dp"
         android:text="Dinamika Kehidupan Manusia"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.298" />
+        app:layout_constraintVertical_bias="0.545" />
 
     <Button
         android:id="@+id/btnJiwaAkalNafsu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:width="280dp"
         android:text="Jiwa, Akal, dan Nafsu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.447" />
+        app:layout_constraintVertical_bias="0.691" />
+
+
 
 </android.support.constraint.ConstraintLayout>
