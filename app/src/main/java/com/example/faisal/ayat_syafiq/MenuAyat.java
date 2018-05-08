@@ -165,10 +165,11 @@ public class MenuAyat extends AppCompatActivity implements NavigationView.OnNavi
             // untuk isi keterangan
             TextView newKeterangan = new TextView(MenuAyat.this);
             newKeterangan.setText(listKeterangan.get(i).toString().replace("&quot;", ""));
-            newKeterangan.setPadding(50, 20, 20, 80);
+            newKeterangan.setPadding(50, 20, 20, 300);
             newKeterangan.setTextColor(Color.parseColor("#000000"));
             newKeteranganLabel.setLineSpacing(0, 1.7f);
             newKeterangan.setTextSize(14);
+
 
             // Tambah nama
             textListNama.add(newNama);
